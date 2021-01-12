@@ -12,7 +12,7 @@ module.exports = async function (context, req) {
         if (resources) {
             if (resources.adminRights && Array.isArray(resources.adminRights)) {
                 resources.adminRights.forEach(element => {
-                    if (req.params.id === element.merchantID) {   //Validate whether user is allowed to see merchant data or not?
+                    if (req.params.id === element.merchantID && (element.adminRights.roles == "admin")) {   //Validate whether user is allowed to see merchant data or not?
                         isMerchantLinked = true;
                     }
                 });

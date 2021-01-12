@@ -6,9 +6,9 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "post"
+        "patch"
       ],
-      "route": "{apiVersion}/merchants/{id}/resources"
+      "route": "{apiVersion}/merchants/{id}/resources/{resourceID}"
     },
     {
       "type": "http",

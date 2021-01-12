@@ -11,6 +11,10 @@ module.exports = async function (context, req) {
             {},
             req.body,
             {
+                adminRights: {
+                    merchantID: req.params.id,
+                    roles: "admin"
+                },
                 docType: 'resources',
                 createdDate: new Date(),
                 updatedDate: new Date(),
